@@ -4,7 +4,16 @@ html {
 }
 
 #map {
-  width: 400px;
-  height: 400px;
-  justify-content: center;
+  width: 90%;
+  height: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+  #map {
+    width: 500px;
+    height: 500px;
+  }
 }
