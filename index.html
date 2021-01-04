@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Where do I worship?</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-  <h1>Where do I worship?</h1>
+  <h1>Where do I Worship?</h1>
   <p>I can help you with that!</p>
 
-  <p>Simply specify the type of place of worship you're looking for, give a general location, and I'll find houses of worship near that location!</p>
+  <p>Simply specify the type of place of worship you're looking for, give a general location, and I'll find houses of
+    worship near that location!</p>
 
-  <p>Of course, you may have noticed that prompt about giving access to your location. If you allow that, then I can just use your current location to locate places near you!</p>
+  <p>Of course, you may have noticed that prompt about giving access to your location. If you allow that, then I can
+    just use your current location to locate places near you!</p>
 
-<select name="worship-types" id="denomination">
-  <option value="">Select Denomination</option>
-  <option value="catholic">Catholic</option>
-  <option value="lutheran">Lutheran</option>
-  <option value="methodist">Methodist</option>
-  <option value="anglican">Anglican</option>
-  <option value="episcopal">Episcopal</option>
-</select>
+  <p>I am seeking a/an
 
-  <input type="text" placeholder="location">
-  <button>Search</button>
-<div id="map"></div>
+    <select name="worship-types" id="denomination">
+      <option value="">Select Denomination</option>
+      <option value="catholic">Catholic</option>
+      <option value="lutheran">Lutheran</option>
+      <option value="methodist">Methodist</option>
+      <option value="anglican">Anglican</option>
+      <option value="episcopal">Episcopal</option>
+    </select>
+
+    place of worship near
+
+    <input type="text" placeholder="location">
+  </p>
+
+
+
+
+  <button id="search">Search</button>
+  <div id="map"></div>
+  <div id="details"></div>
 
   <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbbatwQLNOEY1V9tCq_xLlcZfm61L_RLk&libraries=places&callback=initMap">
-</script>
+  </script>
   <script src="assets/js/map.js"></script>
 </body>
+
 </html>

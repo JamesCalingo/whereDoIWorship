@@ -1,8 +1,13 @@
+const detailDiv = document.querySelector("#details")
+const select = document.querySelector("#denomination")
+const button = document.querySelector("#search")
+
 let map;
 let service;
 let infowindow;
 
 function initMap() {
+  let searchValue = select.value
   let defaultLocation = new google.maps.LatLng(40.758611, -73.976389);
 
   infowindow = new google.maps.InfoWindow();
@@ -11,8 +16,8 @@ function initMap() {
       document.getElementById('map'), {center: defaultLocation, zoom: 15});
 
   let request = {
-    query: 'lutheran',
-    fields: ['name', 'geometry', 'type'],
+    query: searchValue,
+    fields: ['name', 'geometry', 'formatted_address'],
   };
 
   let service = new google.maps.places.PlacesService(map);
@@ -24,6 +29,12 @@ function initMap() {
         createMarker(results[i]);
       }
       map.setCenter(results[0].geometry.location);
+
+      detailDiv.innerHTML = `
+      I found this:<br>
+      ${results[0].name}<br>
+      ${results[0].formatted_address}
+      `
     }
   });
 }
@@ -38,3 +49,5 @@ function createMarker(place) {
     infowindow.open(map);
   });
 }
+
+button.addEventListener("click", initMap)
