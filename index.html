@@ -22,24 +22,29 @@
 
     <select name="worship-types" id="denomination">
       <option value="">Select Denomination</option>
-      <option value="catholic">Catholic</option>
+      <!-- <option value="catholic">Catholic</option>
       <option value="lutheran">Lutheran</option>
       <option value="methodist">Methodist</option>
       <option value="anglican">Anglican</option>
-      <option value="episcopal">Episcopal</option>
+      <option value="episcopal">Episcopal</option> -->
+      <option value="church">Christian</option>
+      <option value="synagogue">Jewish</option>
+      <option value="mosque">Muslim</option>
+      <option value="hindu_temple">Hindu</option>
+      <option value="place_of_worship">General</option>
     </select>
 
     place of worship near
 
-    <input type="text" placeholder="location">
+    <input type="text" id="locationInput" placeholder="Location">
   </p>
 
-
-
-
   <button id="search">Search</button>
+
   <div id="map"></div>
+
   <div id="details"></div>
+  <ul id="list"></ul>
 
   <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbbatwQLNOEY1V9tCq_xLlcZfm61L_RLk&libraries=places&callback=initMap">
