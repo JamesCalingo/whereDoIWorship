@@ -17,3 +17,10 @@ html {
     height: 500px;
   }
 }
+
+
+
+li {
+  text-align: left;
+  margin: 10px 0
+}
