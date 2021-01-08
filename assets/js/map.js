@@ -1,3 +1,4 @@
+
 const select = document.querySelector("#denomination");
 const button = document.querySelector("#search");
 const locationInput = document.querySelector("#locationInput");
@@ -23,7 +24,8 @@ function useAutoComplete () {
   const autocomplete = new google.maps.places.Autocomplete(locationInput);
 }
 
-function search() {
+function search(lat, lon) {
+  list.innerHTML = ""
   let searchValue = select.value;
   let locationValue = locationInput.value || "New York City";
 
@@ -42,6 +44,7 @@ function search() {
 
   service.nearbySearch(request, function (results, status) {
     if (!searchValue || !locationValue) return;
+   
     else if (status === google.maps.places.PlacesServiceStatus.OK) {
       console.log(results);
       for (let i = 0; i < results.length; i++) {
