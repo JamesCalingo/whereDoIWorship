@@ -1,6 +1,6 @@
 const select = document.querySelector("#denomination");
 const button = document.querySelector("#search");
-const locationInput = document.querySelector("#locationInput");
+// const locationInput = document.querySelector("#locationInput");
 const detailDiv = document.querySelector("#details");
 const list = document.querySelector("ol");
 
@@ -29,7 +29,7 @@ function useAutoComplete () {
 function search() {
   list.innerHTML = ""
   let searchValue = select.value;
-  let locationValue = locationInput.value || "New York City";
+  // let locationValue = locationInput.value || "New York City";
 
   let request
 
@@ -87,4 +87,4 @@ function createMarker(place) {
 }
 
 button.addEventListener("click", search);
-locationInput.addEventListener("change", useAutoComplete)
+// locationInput.addEventListener("change", useAutoComplete)
