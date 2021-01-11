@@ -6,17 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Where do I worship?</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbbatwQLNOEY1V9tCq_xLlcZfm61L_RLk&libraries=places&callback=initMap">
+  </script>
 </head>
 
 <body>
   <h1>Where do I Worship?</h1>
   <p>I can help you with that!</p>
 
-  <p>Simply specify the type of place of worship you're looking for, give a general location, and I'll find houses of
+  <p>Simply specify what type of worship you're looking for, and I'll do my best to find places near you!</p>
+
+<p>(NOTE: In order for this to work, you need to allow access to your location when your browser prompts you)</p>
+
+  <!-- <p>Simply specify the type of place of worship you're looking for, give a general location, and I'll find houses of
     worship near that location!</p>
 
   <p>Of course, you may have noticed that prompt about giving access to your location. If you allow that, then I can
-    just use your current location to locate places near you!</p>
+    just use your current location to locate places near you!</p> -->
 
   <p>I am seeking a/an
 
@@ -34,10 +41,12 @@
       <!-- <option value="place_of_worship">General</option> -->
     </select>
 
-    place of worship near
+    place of worship
+
+    <!-- near
 
     <input type="text" id="locationInput" placeholder="Location">
-  </p>
+  </p> -->
 
   <button id="search">Search</button>
 
@@ -46,9 +55,7 @@
   <div id="details"></div>
   <ol id="list"></ol>
 
-  <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbbatwQLNOEY1V9tCq_xLlcZfm61L_RLk&libraries=places&callback=initMap">
-  </script>
+  
   <script src="assets/js/map.js"></script>
 </body>
 
