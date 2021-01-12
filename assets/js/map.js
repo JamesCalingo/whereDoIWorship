@@ -61,7 +61,7 @@ function search() {
       for (let i = 0; i < results.length; i++) {
         createMarker(results[i]);
         detailDiv.innerHTML = `
-        Here's what I found, sorted by distance. Hope this helps!
+        Here are some places that I found near you. Hope this helps!
         `;
         let li = document.createElement("li");
         li.innerHTML = `<b>${results[i].name}</b><br>
