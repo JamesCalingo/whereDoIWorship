@@ -2,7 +2,7 @@ const select = document.querySelector("#denomination");
 const button = document.querySelector("#search");
 // const locationInput = document.querySelector("#locationInput");
 const detailDiv = document.querySelector("#details");
-const list = document.querySelector("ul");
+const list = document.querySelector("ol");
 
 let map;
 let service;
@@ -39,8 +39,8 @@ function search() {
       let lon = pos.coords.longitude
       request = {
         location: new google.maps.LatLng(lat, lon),
-        type: searchValue,
-        radius: 10000
+        keyword: searchValue,
+        rankBy: google.maps.places.RankBy.DISTANCE,
       }
       map = new google.maps.Map(document.getElementById("map"), {
         center: request.location,
@@ -55,7 +55,9 @@ function search() {
   service.nearbySearch(request, function (results, status) {
     console.log(status)
     if (!searchValue) return;
-   
+   else if (status === google.maps.places.PlacesServiceStatus.ZERO_RESULTS) {
+     alert("Unfortunately, I was unable to find any results. Sorry.")
+   }
     else if (status === google.maps.places.PlacesServiceStatus.OK) {
       console.log(results);
       for (let i = 0; i < results.length; i++) {
@@ -73,7 +75,6 @@ function search() {
   });
 })
 }
-
 
 function createMarker(place) {
   const marker = new google.maps.Marker({

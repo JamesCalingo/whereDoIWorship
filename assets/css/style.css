@@ -25,9 +25,7 @@ li {
 ol {
   margin: 10px 5%;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25% ;
-  /* grid-column-start: 2;
-  grid-column-end: 5 */
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
 li {
