@@ -2,7 +2,7 @@ const select = document.querySelector("#denomination");
 const button = document.querySelector("#search");
 // const locationInput = document.querySelector("#locationInput");
 const detailDiv = document.querySelector("#details");
-const list = document.querySelector("ol");
+const list = document.querySelector("ul");
 
 let map;
 let service;
