@@ -54,7 +54,7 @@ function search() {
     console.log(request)
   service.nearbySearch(request, function (results, status) {
     console.log(status)
-    if (!searchValue || !locationValue) return;
+    if (!searchValue) return;
    
     else if (status === google.maps.places.PlacesServiceStatus.OK) {
       console.log(results);
