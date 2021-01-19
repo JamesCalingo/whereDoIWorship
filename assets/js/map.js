@@ -27,7 +27,6 @@ function useAutoComplete() {
 function search() {
   detailDiv.innerHTML="Gimme a sec here..."
   list.innerHTML = "";
-  console.log(select)
   let searchValue = select.value;
   // let locationValue = locationInput.value || "New York City";
 
@@ -58,7 +57,7 @@ function search() {
       } else if (status === google.maps.places.PlacesServiceStatus.OK) {
         console.log(results);
         for (let i = 0; i < results.length; i++) {
-          createMarker(results[i]);
+          createMarker(results[i], (i+1).toString());
           detailDiv.innerHTML = `
         Here are some places that I found near you. Hope this helps!
         `;
@@ -73,10 +72,11 @@ function search() {
   });
 }
 
-function createMarker(place) {
+function createMarker(place, index) {
   const marker = new google.maps.Marker({
     map,
     position: place.geometry.location,
+    label: index
   });
   google.maps.event.addListener(marker, "click", () => {
     infowindow.setContent(place.name);
