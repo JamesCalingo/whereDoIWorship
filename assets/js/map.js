@@ -25,6 +25,7 @@ function useAutoComplete() {
 }
 
 function search() {
+  detailDiv.innerHTML="Gimme a sec here..."
   list.innerHTML = "";
   console.log(select)
   let searchValue = select.value;
@@ -53,6 +54,7 @@ function search() {
       if (!searchValue) return;
       else if (status === google.maps.places.PlacesServiceStatus.ZERO_RESULTS) {
         alert("Unfortunately, I was unable to find any results. Sorry.");
+        detailDiv.innerHTML = `NO RESULTS FOUND`
       } else if (status === google.maps.places.PlacesServiceStatus.OK) {
         console.log(results);
         for (let i = 0; i < results.length; i++) {
