@@ -19,26 +19,23 @@ function initAutocomplete() {
     searchBox.setBounds(map.getBounds());
   });
 
-  searchBox.addListener("places_changed", () => {
-    const places = searchBox.getPlaces();
+function inputSearch() {
+  const places = searchBox.getPlaces();
 
-    if (places.length == 0) {
-      return;
-    }
+  if (places.length == 0) {
+    return;
+  }
+  const bounds = new google.maps.LatLngBounds();
 
-    // For each place, get the icon, name and location.
-    const bounds = new google.maps.LatLngBounds();
-    places.forEach((place) => {
-      let lat = place.geometry.location.lat();
-      let lon = place.geometry.location.lng();
-      search(lat, lon);
-      if (!place.geometry) {
-        console.log("Returned place contains no geometry");
-        return;
-      }
-    });
-  });
+    let lat = places[0].geometry.location.lat();
+    let lon = places[0].geometry.location.lng();
+    search(lat, lon);
 }
+
+  searchBox.addListener("places_changed", inputSearch);
+  inputBtn.addEventListener("click", inputSearch)
+}
+
 
 function search(lat, lon) {
   detailDiv.innerHTML = "Gimme a sec here...";
