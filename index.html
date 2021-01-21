@@ -7,7 +7,7 @@
   <title>Where do I worship?</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbbatwQLNOEY1V9tCq_xLlcZfm61L_RLk&libraries=places&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbbatwQLNOEY1V9tCq_xLlcZfm61L_RLk&libraries=places&callback=initAutocomplete">
   </script>
 </head>
 
@@ -42,14 +42,13 @@
       <!-- <option value="place_of_worship">General</option> -->
     </select>
 
-    place of worship near me.
+    place of worship near 
 
-    <!-- near
+    <input type="text" id="pac-input" class="controls" placeholder="Location">
+    <button id="inputSearch">Search</button>
+  </p>
 
-    <input type="text" id="locationInput" placeholder="Location">
-  </p> -->
-
-  <button id="search">Search using current location</button>
+  <button id="geoSearch">Search using current location</button>
 
   <div id="map"></div>
 
@@ -57,7 +56,7 @@
   <ol id="list"></ol>
 
   
-  <script src="assets/js/map.js"></script>
+  <script src="assets/js/search.js"></script>
 </body>
 
 </html>
