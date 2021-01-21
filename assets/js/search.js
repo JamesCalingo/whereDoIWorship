@@ -2,19 +2,18 @@ const select = document.querySelector("#denomination");
 const geoSearchBtn = document.querySelector("#geoSearch");
 const detailDiv = document.querySelector("#details");
 const list = document.querySelector("ol");
-const input = document.querySelector("#pac-input");
-const inputBtn = document.querySelector("#inputSearch");
 
 function initAutocomplete() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 40.758611, lng: -73.976389 },
     zoom: 15,
   });
-  // Create the search box and link it to the UI element.
+  
+  const inputBtn = document.querySelector("#inputSearch");
   const input = document.getElementById("pac-input");
   const searchBox = new google.maps.places.SearchBox(input);
 
-  // Bias the SearchBox results towards current map's viewport.
+
   map.addListener("bounds_changed", () => {
     searchBox.setBounds(map.getBounds());
   });
