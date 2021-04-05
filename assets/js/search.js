@@ -30,7 +30,7 @@ function initAutocomplete() {
 
 function search(lat, lon) {
   const select = document.querySelector("#denomination");
-  const detailDiv = document.querySelector("#details");
+  const detailDiv = document.querySelector("#list-header");
   const list = document.querySelector("ol");
 
   detailDiv.innerHTML = "Gimme a sec here...";

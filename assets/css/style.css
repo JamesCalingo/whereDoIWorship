@@ -18,22 +18,34 @@ li {
 
 @media only screen and (min-width: 1000px) {
 
-  .container{
-    position: relative;
+  body{
+    margin: 5%;
+    margin-top: 1%
   }
 
-  .top {
+  .top, .app {
   display: flex;
   }
 
-  #map {
-    height: 900px;
+  .top{
+    height: 100px
   }
 
-ol {
+  .app {
+    max-height: 800px
+  }
+
+  #map {
+    height: 750px;
+    width: 50%;
+    left: 0;
+    transform: translateX(0)
+  }
+
+#details {
   margin: 10px 5%;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+overflow: hidden;
+overflow-y: scroll;
 }
 
 li {
