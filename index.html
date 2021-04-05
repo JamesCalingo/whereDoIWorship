@@ -12,10 +12,9 @@
 </head>
 
 <body>
-  <div class="container">
+  <h1>Where do I Worship?</h1>
   <div class="top">
-    <h1>Where do I Worship?</h1>
-    
+
 
 
 
@@ -40,32 +39,37 @@
 
       <input type="text" id="pac-input" class="controls" placeholder="Location">
       <button id="inputSearch">Search</button>
+      <button id="geoSearch">Search using current location</button>
     </p>
 
-    <button id="geoSearch">Search using current location</button>
   </div>
-<div class="app">
+  <div class="app">
 
-  <div id="map"></div>
-  
-  <div id="details">
-    <div id="list-header"></div>
-  <ol id="list"></ol>
-</div>
-</div>
+    <div id="map"></div>
 
-  <p>Let me help you with that!</p>
+    <div id="details">
+      <div id="list-header"> <p>Simply specify what type of worship you're looking for and a general location for me to look around, and I'll do
+        my
+        best to find places near you!</p>
+    
+      <p>Alternatively, you can use the "search using current location" button, and I'll look for houses of worship of
+        your
+        specified type in your general location!
+        <br>
+        (NOTE: In order for this to work, you need to allow access to your location when your browser prompts you)</p></div>
+      <ol id="list"></ol>
+    </div>
+  </div>
 
-    <p>Simply specify what type of worship you're looking for and a general location for me to look around, and I'll do
-      my
-      best to find places near you!</p>
+  <p>Simply specify what type of worship you're looking for and a general location for me to look around, and I'll do
+    my
+    best to find places near you!</p>
 
-    <p>Alternatively, you can use the "search using current location" button, and I'll look for houses of worship of
-      your
-      specified type in your general location!
-      <br>
-      (NOTE: In order for this to work, you need to allow access to your location when your browser prompts you)</p>
-</div>
+  <p>Alternatively, you can use the "search using current location" button, and I'll look for houses of worship of
+    your
+    specified type in your general location!
+    <br>
+    (NOTE: In order for this to work, you need to allow access to your location when your browser prompts you)</p>
 
   <script src="assets/js/search.js"></script>
 </body>

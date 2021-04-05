@@ -3,6 +3,10 @@ html {
   text-align: center;
 }
 
+h1 {
+  font-size: 1.5rem
+}
+
 #map {
   width: 90%;
   height: 500px;
@@ -27,23 +31,24 @@ li {
   display: flex;
   }
 
-  .top{
-    height: 100px
+  .top p{
+    margin: 1%
   }
 
   .app {
-    max-height: 800px
+    margin-top: 0;
+    max-height: 700px;
+    
   }
 
   #map {
-    height: 750px;
-    width: 50%;
+    height: 650px;
+    width: 75%;
     left: 0;
     transform: translateX(0)
   }
 
 #details {
-  margin: 10px 5%;
 overflow: hidden;
 overflow-y: scroll;
 }
