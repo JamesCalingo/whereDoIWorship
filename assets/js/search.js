@@ -25,7 +25,6 @@ function initAutocomplete() {
     search(lat, lon);
   }
 
-  // searchBox.addListener("places_changed", inputSearch);
   inputBtn.addEventListener("click", inputSearch);
 }
 

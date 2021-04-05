@@ -17,6 +17,15 @@ li {
 }
 
 @media only screen and (min-width: 1000px) {
+
+  .container{
+    position: relative;
+  }
+
+  .top {
+  display: flex;
+  }
+
   #map {
     height: 900px;
   }
