@@ -18,8 +18,7 @@ li {
 
 @media only screen and (min-width: 1000px) {
   #map {
-    width: 500px;
-    height: 500px;
+    height: 900px;
   }
 
 ol {

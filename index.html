@@ -12,43 +12,47 @@
 </head>
 
 <body>
-  <h1>Where do I Worship?</h1>
-  <p>Let me help you with that!</p>
+  <div class="top">
+    <h1>Where do I Worship?</h1>
+    <p>Let me help you with that!</p>
 
-  <p>Simply specify what type of worship you're looking for and a general location for me to look around, and I'll do my
-    best to find places near you!</p>
+    <p>Simply specify what type of worship you're looking for and a general location for me to look around, and I'll do
+      my
+      best to find places near you!</p>
 
-  <p>Alternatively, you can use the "search using current location" button, and I'll look for houses of worship of your
-    specified type in your general location!
-    <br>
-    (NOTE: In order for this to work, you need to allow access to your location when your browser prompts you)</p>
+    <p>Alternatively, you can use the "search using current location" button, and I'll look for houses of worship of
+      your
+      specified type in your general location!
+      <br>
+      (NOTE: In order for this to work, you need to allow access to your location when your browser prompts you)</p>
 
 
 
-  <p>I am seeking a/an
+    <p>I am seeking a/an
 
-    <select name="worship-types" id="denomination">
-      <option keyword="boom" value="">Select Denomination</option>
-      <option value="catholic church">Catholic</option>
-      <option value="lutheran church">Lutheran</option>
-      <option value="methodist church">Methodist</option>
-      <option value="anglican church">Anglican</option>
-      <option value="episcopal church">Episcopal</option>
-      <option value="baptist church">Baptist</option>
-      <option value="orthodox church">Orthodox</option>
-      <option value="synagogue">Jewish</option>
-      <option value="mosque">Muslim</option>
-      <option value="hindu temple">Hindu</option>
-      <!-- <option value="place_of_worship">General</option> -->
-    </select>
+      <select name="worship-types" id="denomination">
+        <option keyword="boom" value="">Select Denomination</option>
+        <option value="catholic church">Catholic</option>
+        <option value="lutheran church">Lutheran</option>
+        <option value="methodist church">Methodist</option>
+        <option value="anglican church">Anglican</option>
+        <option value="episcopal church">Episcopal</option>
+        <option value="baptist church">Baptist</option>
+        <option value="orthodox church">Orthodox</option>
+        <option value="synagogue">Jewish</option>
+        <option value="mosque">Muslim</option>
+        <option value="hindu temple">Hindu</option>
+        <!-- <option value="place_of_worship">General</option> -->
+      </select>
 
-    place of worship near
+      place of worship near
 
-    <input type="text" id="pac-input" class="controls" placeholder="Location">
-    <button id="inputSearch">Search</button>
-  </p>
+      <input type="text" id="pac-input" class="controls" placeholder="Location">
+      <button id="inputSearch">Search</button>
+    </p>
 
-  <button id="geoSearch">Search using current location</button>
+    <button id="geoSearch">Search using current location</button>
+  </div>
 
   <div id="map"></div>
 

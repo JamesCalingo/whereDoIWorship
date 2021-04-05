@@ -1,42 +1,39 @@
-const select = document.querySelector("#denomination");
-const geoSearchBtn = document.querySelector("#geoSearch");
-const detailDiv = document.querySelector("#details");
-const list = document.querySelector("ol");
-
 function initAutocomplete() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 40.758611, lng: -73.976389 },
     zoom: 15,
   });
-  
+
   const inputBtn = document.querySelector("#inputSearch");
   const input = document.getElementById("pac-input");
   const searchBox = new google.maps.places.SearchBox(input);
-
 
   map.addListener("bounds_changed", () => {
     searchBox.setBounds(map.getBounds());
   });
 
-function inputSearch() {
-  const places = searchBox.getPlaces();
+  function inputSearch() {
+    const places = searchBox.getPlaces();
 
-  if (places.length == 0) {
-    return;
-  }
-  const bounds = new google.maps.LatLngBounds();
+    if (places.length == 0) {
+      return;
+    }
+    const bounds = new google.maps.LatLngBounds();
 
     let lat = places[0].geometry.location.lat();
     let lon = places[0].geometry.location.lng();
     search(lat, lon);
-}
+  }
 
-  searchBox.addListener("places_changed", inputSearch);
-  inputBtn.addEventListener("click", inputSearch)
+  // searchBox.addListener("places_changed", inputSearch);
+  inputBtn.addEventListener("click", inputSearch);
 }
-
 
 function search(lat, lon) {
+  const select = document.querySelector("#denomination");
+  const detailDiv = document.querySelector("#details");
+  const list = document.querySelector("ol");
+
   detailDiv.innerHTML = "Gimme a sec here...";
   list.innerHTML = "";
   let searchValue = select.value;
@@ -68,12 +65,12 @@ function search(lat, lon) {
       for (let i = 0; i < results.length; i++) {
         createMarker(results[i], (i + 1).toString());
         detailDiv.innerHTML = `
-      Here are some places that I found near you. Hope this helps!
-      `;
+        Here are some places that I found near you. Hope this helps!
+        `;
         let li = document.createElement("li");
         li.innerHTML = `<b>${results[i].name}</b><br>
-     ${results[i].vicinity}
-     `;
+        ${results[i].vicinity}
+        `;
         list.appendChild(li);
       }
     }
@@ -100,4 +97,5 @@ function searchByGeolocation() {
   });
 }
 
+const geoSearchBtn = document.querySelector("#geoSearch");
 geoSearchBtn.addEventListener("click", searchByGeolocation);
