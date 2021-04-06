@@ -22,40 +22,50 @@ li {
 
 @media only screen and (min-width: 1000px) {
 
-  body{
+  body {
     margin: 5%;
     margin-top: 1%
   }
 
-  .top, .app {
-  display: flex;
+  .top,
+  .app {
+    display: flex;
   }
 
-  .top p{
+  .top p {
     margin: 1%
   }
 
   .app {
     margin-top: 0;
     max-height: 700px;
-    
+
   }
 
   #map {
     height: 650px;
-    width: 75%;
+    width: 69%;
     left: 0;
-    transform: translateX(0)
+    transform: translateX(0);
+    margin-right: 1%
   }
 
-#details {
-overflow: hidden;
-overflow-y: scroll;
-}
+  #details {
+    width: 30%;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
 
-li {
-  margin: 10px
-}
+  #list-header {
+    font-weight: bold;
+  }
+
+  .app ol {
+    overflow-y: scroll;
+  }
+
+  li {
+    margin: 10px
+  }
 
 }
-
