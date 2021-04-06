@@ -5,7 +5,7 @@ function initAutocomplete() {
   });
 
   const inputBtn = document.querySelector("#inputSearch");
-  const input = document.getElementById("pac-input");
+  const input = document.getElementById("locationInput");
   const searchBox = new google.maps.places.SearchBox(input);
 
   map.addListener("bounds_changed", () => {
@@ -38,6 +38,7 @@ function search(lat, lon) {
   let searchValue = select.value;
   if (searchValue === "") {
     alert("You need to pick a religion/denomination to continue.");
+    detailDiv.innerHTML = "There was a problem with your request."
     return;
   }
 

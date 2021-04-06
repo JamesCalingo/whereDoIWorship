@@ -13,7 +13,7 @@
 
 <body>
   <h1>Where do I Worship?</h1>
-  <div class="top">
+  <header>
 
     <p>I am seeking a/an
 
@@ -33,14 +33,14 @@
       </select>
 
       place of worship near
-
-      <input type="text" id="pac-input" class="controls" placeholder="Location">
+      <label for="locationInput"></label>
+      <input type="text" id="locationInput" class="controls" placeholder="Location">
       <button id="inputSearch">Search</button>
       <button id="geoSearch">Search using current location</button>
     </p>
 
-  </div>
-  <div class="app">
+  </header>
+  <main>
 
     <div id="map"></div>
 
@@ -56,8 +56,13 @@
       </div>
       <ol id="list"></ol>
     </div>
-  </div>
-
+  </main>
+  <p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+      <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss"
+        alt="Valid CSS!" />
+    </a>
+  </p>
   <script src="assets/js/search.js"></script>
 </body>
 
