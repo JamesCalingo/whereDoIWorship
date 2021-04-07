@@ -44,12 +44,11 @@ li {
 
   main{
     margin-top: 0;
-    max-height: 700px;
+    max-height: 600px;
 
   }
 
   #map {
-    height: 650px;
     width: 69%;
     left: 0;
     transform: translateX(0);

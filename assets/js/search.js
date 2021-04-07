@@ -3,18 +3,14 @@ function initAutocomplete() {
     center: { lat: 40.758611, lng: -73.976389 },
     zoom: 15,
   });
-
   const inputBtn = document.querySelector("#inputSearch");
   const input = document.getElementById("locationInput");
   const searchBox = new google.maps.places.SearchBox(input);
-
   map.addListener("bounds_changed", () => {
     searchBox.setBounds(map.getBounds());
   });
-
   function inputSearch() {
     const places = searchBox.getPlaces();
-
     if (places.length == 0) {
       return;
     }
@@ -38,7 +34,7 @@ function search(lat, lon) {
   let searchValue = select.value;
   if (searchValue === "") {
     alert("You need to pick a religion/denomination to continue.");
-    detailDiv.innerHTML = "There was a problem with your request."
+    detailDiv.innerHTML = "There was a problem with your request.";
     return;
   }
 
