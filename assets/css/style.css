@@ -36,6 +36,7 @@ li {
   header,
   main{
     display: flex;
+    justify-content: space-between;
   }
 
   .top p {
@@ -49,7 +50,7 @@ li {
   }
 
   #map {
-    width: 69%;
+    width: 65%;
     left: 0;
     transform: translateX(0);
     margin-right: 1%
