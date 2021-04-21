@@ -64,6 +64,7 @@ function search(lat, lon) {
         Here are some places that I found near you. Hope this helps!
         `;
         let li = document.createElement("li");
+        li.classList.add("house-of-worship")
         li.innerHTML = `<b>${results[i].name}</b><br>
         ${results[i].vicinity}
         `;
@@ -72,6 +73,13 @@ function search(lat, lon) {
     }
   });
 }
+
+function centerMap(place) {
+
+}
+
+const li = document.querySelectorAll("li")
+li.forEach(item => item.addEventListener("click", centerMap))
 
 function createMarker(place, index) {
   const marker = new google.maps.Marker({

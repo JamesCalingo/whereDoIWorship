@@ -58,17 +58,14 @@ li {
 
   #details {
     width: 30%;
-    overflow: hidden;
-    overflow-y: scroll;
+  overflow-y: scroll
   }
 
   #list-header {
     font-weight: bold;
   }
 
-  mainol {
-    overflow-y: scroll;
-  }
+ 
 
   li {
     margin: 10px
