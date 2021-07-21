@@ -15,3 +15,4 @@ Also, if you can think of any religions/denominations I may have missed in the d
 - JS
 - Google API
 
+Header Photo: the Duomo in Florence, Italy by MPC
