@@ -4,8 +4,9 @@ Find places of worship near you!
 # How it works
 All you need to do is select which religion you're looking for places of worship for, allow the page access to your location, and it will find nearby results.
 
-# Coming soon
-This app is currently wholly dependant on geolocation. I am working on adding an input field where the user can specify a location to search for houses of worship.
+Alternatively, you can use the input field to select a location/address using the Google Places API, and then you can search from that location.
+
+Perfect for your next business trip/vacation!
 
 Also, if you can think of any religions/denominations I may have missed in the dropdown menu, let me know!
 
@@ -13,6 +14,6 @@ Also, if you can think of any religions/denominations I may have missed in the d
 - HTML
 - CSS
 - JS
-- Google API
+- Google APIs (Maps, Places)
 
 Header Photo: the Duomo in Florence, Italy by MPC
