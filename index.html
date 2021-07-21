@@ -12,50 +12,54 @@
 </head>
 
 <body>
-  <h1>Where do I Worship?</h1>
   <header>
-    <div class="container">
-    <p>I am seeking a/an
-      <label hidden for="denomination">select religious denomination</label>
-      <select name="worship-types" id="denomination">
-        <option value="">Select Denomination</option>
-        <option value="catholic church">Catholic</option>
-        <option value="lutheran church">Lutheran</option>
-        <option value="methodist church">Methodist</option>
-        <option value="anglican church">Anglican</option>
-        <option value="episcopal church">Episcopal</option>
-        <option value="baptist church">Baptist</option>
-        <option value="orthodox church">Orthodox</option>
-        <option value="synagogue">Jewish</option>
-        <option value="mosque">Muslim</option>
-        <option value="hindu temple">Hindu</option>
-        <!-- <option value="place_of_worship">General</option> -->
-      </select>
-
-      place of worship near
-      <label hidden for="locationInput">input location to search</label>
-      <input type="text" id="locationInput" class="controls" placeholder="Location">
-      <button id="inputSearch">Search</button>
-      <button id="geoSearch">Search using current location</button>
-    </p>
-
+    <h1>Where do I Worship?</h1>
   </header>
   <main>
+    <div id="search-form">
+      <p>I am seeking a/an
+        <label hidden for="denomination">select religious denomination</label>
+        <select name="worship-types" id="denomination">
+          <option value="">Select Denomination</option>
+          <option value="catholic church">Catholic</option>
+          <option value="lutheran church">Lutheran</option>
+          <option value="methodist church">Methodist</option>
+          <option value="anglican church">Anglican</option>
+          <option value="episcopal church">Episcopal</option>
+          <option value="baptist church">Baptist</option>
+          <option value="orthodox church">Orthodox</option>
+          <option value="synagogue">Jewish</option>
+          <option value="mosque">Muslim</option>
+          <option value="hindu temple">Hindu</option>
+          <!-- <option value="place_of_worship">General</option> -->
+        </select>
 
-    <div id="map"></div>
+        place of worship near
+        <label hidden for="locationInput">input location to search</label>
+        <input type="text" id="locationInput" class="controls" placeholder="Location">
+        <button id="inputSearch">Search</button>
+        <button id="geoSearch">Search using current location</button>
+      </p>
 
-    <div id="details">
-      <div id="list-header">
-        <p>Simply specify what type of worship you're looking for and a general location for me to look around, and I'll
-          do my best to find places near you!</p>
+      <div id="app">
+        <div id="map"></div>
 
-        <p>Alternatively, you can use the "search using current location" button, and I'll look for houses of worship of
-          your specified type in your general location!
-          <br>
-          (NOTE: In order for this to work, you need to allow access to your location when your browser prompts you)</p>
+        <div id="details">
+          <div id="list-header">
+            <p>Simply specify what type of worship you're looking for and a general location for me to look around, and
+              I'll
+              do my best to find places near you!</p>
+
+            <p>Alternatively, you can use the "search using current location" button, and I'll look for houses of
+              worship of
+              your specified type in your general location!
+              <br>
+              (NOTE: In order for this to work, you need to allow access to your location when your browser prompts you)
+            </p>
+          </div>
+          <ol id="list"></ol>
+        </div>
       </div>
-      <ol id="list"></ol>
-    </div>
   </main>
   <button id="toggle">Toggle Light/Dark Modes</button>
   <p>
@@ -64,7 +68,7 @@
         alt="Valid CSS!" />
     </a>
   </p>
-</div>
+  </div>
   <script src="assets/js/search.js"></script>
   <script src="assets/js/toggleDark.js"></script>
 </body>

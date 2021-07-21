@@ -4,7 +4,15 @@ html {
 }
 
 h1 {
-  font-size: 1.5rem
+  font-size: 4rem;
+}
+
+header {
+  background-image: url("../img/IMG_0878.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding-top: 0;
 }
 
 #map {
@@ -33,8 +41,11 @@ li {
     margin-top: 1%
   }
 
-  header,
-  main{
+  #search-form {
+    text-align: left;
+  }
+
+  #app{
     display: flex;
     justify-content: space-between;
   }
