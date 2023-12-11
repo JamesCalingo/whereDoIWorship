@@ -60,7 +60,7 @@ function search(lat, lon) {
     } else if (status === google.maps.places.PlacesServiceStatus.OK) {
       console.log(results);
       for (let i = 0; i < results.length; i++) {
-        console.log(service.getDetails({placeId: results[i].place_id, fields: ['website']}))
+        service.getDetails({placeId: results[i].place_id, fields: ['website']}, result => console.log(result))
         createMarker(results[i], (i + 1).toString());
         detailDiv.innerHTML = `
         Here are some places that I found near you. Hope this helps!
