@@ -69,7 +69,6 @@ function search(lat, lon) {
         li.classList.add("house-of-worship")
         li.innerHTML = `<b>${results[i].name}</b><br />
         ${results[i].vicinity}<br />
-        ${website ? <a>website</a> : <p>No website found</p>}
         `;
         list.appendChild(li);
       }
