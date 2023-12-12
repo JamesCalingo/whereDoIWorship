@@ -58,17 +58,18 @@ function search(lat, lon) {
       alert("Unfortunately, I was unable to find any results. Sorry.");
       detailDiv.innerHTML = `NO RESULTS FOUND`;
     } else if (status === google.maps.places.PlacesServiceStatus.OK) {
-      console.log(results);
       for (let i = 0; i < results.length; i++) {
-        service.getDetails({placeId: results[i].place_id, fields: ['website']}, result => console.log(i, result))
+        let website = service.getDetails({placeId: results[i].place_id, fields: ['website']}, result => console.log(i + 1, result))
+        console.log(website)
         createMarker(results[i], (i + 1).toString());
         detailDiv.innerHTML = `
         Here are some places that I found near you. Hope this helps!
         `;
         let li = document.createElement("li");
         li.classList.add("house-of-worship")
-        li.innerHTML = `<b>${results[i].name}</b><br>
-        ${results[i].vicinity}i
+        li.innerHTML = `<b>${results[i].name}</b><br />
+        ${results[i].vicinity}<br />
+        ${website ? <a>website</a> : <p>No website found</p>}
         `;
         list.appendChild(li);
       }
