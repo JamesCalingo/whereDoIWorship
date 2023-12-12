@@ -59,8 +59,9 @@ function search(lat, lon) {
       detailDiv.innerHTML = `NO RESULTS FOUND`;
     } else if (status === google.maps.places.PlacesServiceStatus.OK) {
       for (let i = 0; i < results.length; i++) {
-        let website = service.getDetails({placeId: results[i].place_id, fields: ['website']}, result => console.log(i + 1, result))
-        console.log(website)
+        let website = ''
+        service.getDetails({placeId: results[i].place_id, fields: ['website']}, result => {results[i].website = result.website})
+        console.log(results[i])
         createMarker(results[i], (i + 1).toString());
         detailDiv.innerHTML = `
         Here are some places that I found near you. Hope this helps!
