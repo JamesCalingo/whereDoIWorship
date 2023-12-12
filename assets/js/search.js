@@ -61,7 +61,6 @@ function search(lat, lon) {
       for (let i = 0; i < results.length; i++) {
         let website = ''
         service.getDetails({placeId: results[i].place_id, fields: ['website']}, result => {results[i].website = result.website})
-        console.log(results[i])
         createMarker(results[i], (i + 1).toString());
         detailDiv.innerHTML = `
         Here are some places that I found near you. Hope this helps!
@@ -70,6 +69,7 @@ function search(lat, lon) {
         li.classList.add("house-of-worship")
         li.innerHTML = `<b>${results[i].name}</b><br />
         ${results[i].vicinity}<br />
+        ${results[i].website? `Website: ${results[i].website}` : "No website found."}
         `;
         list.appendChild(li);
       }
