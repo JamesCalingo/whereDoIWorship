@@ -42,6 +42,7 @@ function search(lat, lon) {
     location: new google.maps.LatLng(lat, lon),
     keyword: searchValue,
     rankBy: google.maps.places.RankBy.DISTANCE,
+
   };
   map = new google.maps.Map(document.getElementById("map"), {
     center: request.location,
@@ -49,7 +50,6 @@ function search(lat, lon) {
   });
 
   let service = new google.maps.places.PlacesService(map);
- 
 
   infowindow = new google.maps.InfoWindow();
 
@@ -58,19 +58,21 @@ function search(lat, lon) {
       alert("Unfortunately, I was unable to find any results. Sorry.");
       detailDiv.innerHTML = `NO RESULTS FOUND`;
     } else if (status === google.maps.places.PlacesServiceStatus.OK) {
+      console.log(results)
       for (let i = 0; i < results.length; i++) {
-        let website = ''
-        service.getDetails({placeId: results[i].place_id, fields: ['website']}, result => {results[i].website = result.website})
         createMarker(results[i], (i + 1).toString());
         detailDiv.innerHTML = `
         Here are some places that I found near you. Hope this helps!
         `;
         let li = document.createElement("li");
         li.classList.add("house-of-worship")
+        console.log(results[i])
         li.innerHTML = `<b>${results[i].name}</b><br />
         ${results[i].vicinity}<br />
-        ${results[i].website? `Website: ${results[i].website}` : "No website found."}
         `;
+        service.getDetails({placeId: results[i].place_id, fields: ['website']}, result => {
+          li.append(result.website ? `Website: ${result.website}` : "No website found.")
+        })
         list.appendChild(li);
       }
     }
