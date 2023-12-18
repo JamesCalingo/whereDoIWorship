@@ -70,8 +70,17 @@ function search(lat, lon) {
         li.innerHTML = `<b>${results[i].name}</b><br />
         ${results[i].vicinity}<br />
         `;
-        service.getDetails({placeId: results[i].place_id, fields: ['website']}, result => {
-          li.append(result.website ? `Website: ${result.website}` : "No website found.")
+        service.getDetails({ placeId: results[i].place_id, fields: ['website'] }, result => {
+          if (result.website) {
+            let a = document.createElement("a")
+            let text = document.createTextNode(result.website)
+            a.appendChild(text)
+            a.href = result.website
+            a.target = "blank"
+            li.append(a)
+          } else {
+            li.append("No website found.")
+          }
         })
         list.appendChild(li);
       }
