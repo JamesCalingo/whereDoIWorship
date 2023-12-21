@@ -7,5 +7,4 @@ function toggleDark() {
   console.log(body.classList.contains("dark"))
 }
 
-
 toggleBtn.addEventListener("click", toggleDark);

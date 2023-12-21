@@ -1,3 +1,4 @@
+// Search
 function initAutocomplete() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 40.758611, lng: -73.976389 },
@@ -9,6 +10,7 @@ function initAutocomplete() {
   map.addListener("bounds_changed", () => {
     searchBox.setBounds(map.getBounds());
   });
+  
   function inputSearch() {
     const places = searchBox.getPlaces();
     if (places.length == 0) {
@@ -32,6 +34,7 @@ function search(lat, lon) {
   detailDiv.innerHTML = "Gimme a sec here...";
   list.innerHTML = "";
   let searchValue = select.value;
+  // Non-value error checking
   if (searchValue === "") {
     alert("You need to pick a religion/denomination to continue.");
     detailDiv.innerHTML = "There was a problem with your request.";
@@ -58,7 +61,6 @@ function search(lat, lon) {
       alert("Unfortunately, I was unable to find any results. Sorry.");
       detailDiv.innerHTML = `NO RESULTS FOUND`;
     } else if (status === google.maps.places.PlacesServiceStatus.OK) {
-      console.log(results)
       for (let i = 0; i < results.length; i++) {
         createMarker(results[i], (i + 1).toString());
         detailDiv.innerHTML = `
@@ -66,7 +68,6 @@ function search(lat, lon) {
         `;
         let li = document.createElement("li");
         li.classList.add("house-of-worship")
-        console.log(results[i])
         li.innerHTML = `<b>${results[i].name}</b><br />
         ${results[i].vicinity}<br />
         `;
@@ -88,8 +89,9 @@ function search(lat, lon) {
   });
 }
 
+//TO DO: Functionality to center map based on clicking on list item
 function centerMap(place) {
-
+console.log(place, "HI")
 }
 
 const li = document.querySelectorAll("li")
