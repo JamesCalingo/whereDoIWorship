@@ -1,0 +1,16 @@
+{
+  "name": "Where do I Worship",
+  "short_name": "WDIW",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+        "src": "/assets/icons/icon.png",
+        "type": "image/png",
+        "sizes": "500x500"
+    }
+  ]
+}
