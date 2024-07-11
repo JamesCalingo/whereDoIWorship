@@ -7,13 +7,13 @@
   <title>Where do I worship?</title>
   <link rel="favicon" href="favicon.ico">
   <link rel="manifest" href="manifest.json" />
- 
+  
   <link rel="apple-touch-icon" href="assets/icons/icon.png" />
   <meta name="apple-mobile-web-app-status-bar" content="#ffffff" />
   <meta name="theme-color" content="#ffffff" />
 
   <link rel="stylesheet" href="assets/css/style.css">
-  </script>
+  <script type="module" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbbatwQLNOEY1V9tCq_xLlcZfm61L_RLk&libraries=places&callback=initAutocomplete"></script>
 </head>
 
 <body>
@@ -21,10 +21,10 @@
     <h1>Where do I Worship?</h1>
   </header>
   <main>
-    <h1>Temporarily Out of Service.</h1>
+    <!-- <h1>Temporarily Out of Service.</h1>
 
-    <p>Upcoming Google API Key rules run the risk of bricking this app due to how I set it up in the past, so I'm taking it down for a bit while I try to figure out how to comply.</p>
-    <!-- <div id="search-form">
+    <p>Upcoming Google API Key rules run the risk of bricking this app due to how I set it up in the past, so I'm taking it down for a bit while I try to figure out how to comply.</p> -->
+    <div id="search-form">
       <p id="search-text">I am seeking a/an
         <label hidden for="denomination">select religious denomination</label>
         <select name="worship-types" id="denomination">
@@ -69,7 +69,7 @@
         <ol id="list"></ol>
       </div>
     </div>
-  </main> -->
+  </main>
   <button id="toggle">Toggle Light/Dark Modes</button>
   <p>
     <a href="https://jigsaw.w3.org/css-validator/check/referer">
