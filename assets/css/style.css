@@ -16,12 +16,8 @@ button {
 }
 
 header {
-  background-image: url("../img/IMG_0878.JPG");
-  color: white;
-  -webkit-text-stroke: 1px black;
   background-repeat: no-repeat;
   background-size: cover;
-
   padding-top: 0;
 }
 
