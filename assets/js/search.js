@@ -17,6 +17,7 @@ function initAutocomplete() {
       return;
     }
     const bounds = new google.maps.LatLngBounds();
+    console.log(places)
 
     let lat = places[0].geometry.location.lat();
     let lon = places[0].geometry.location.lng();
@@ -94,6 +95,10 @@ function centerMap(place) {
 console.log(place, "HI")
 }
 
+function getDirections(lat, lon) {
+  let link = `https://www.google.com/maps/dir//''/data=!4m17!1m7!3m6!1s0x89c3af72cc181803:0x92842c84c4136335!2sCharley's+Aunt+Restaurant!8m2!3d40.740208!4d-74.382466!16s%2Fg%2F1vntkv0z!4m8!1m0!1m5!1m1!1s0x89c3af72cc181803:0x92842c84c4136335!2m2!1d-74.3824138!2d40.740192!3e2?entry=ttu`
+}
+
 const li = document.querySelectorAll("li")
 li.forEach(item => item.addEventListener("click", centerMap))
 
@@ -119,3 +124,4 @@ function searchByGeolocation() {
 
 const geoSearchBtn = document.querySelector("#geoSearch");
 geoSearchBtn.addEventListener("click", searchByGeolocation);
+
